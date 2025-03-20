@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 97%;
+    --foreground: 222 47% 11%;
+    
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Border & Input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    
+    /* Primary */
+    --primary: 224 76% 82%;
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 224 100% 95%;
+    --primary-100: 224 95% 90%;
+    --primary-200: 224 90% 85%;
+    --primary-300: 224 85% 80%;
+    --primary-400: 224 80% 75%;
+    --primary-500: 224 76% 70%;
+    --primary-600: 224 70% 60%;
+    --primary-700: 224 65% 50%;
+    --primary-800: 224 70% 40%;
+    --primary-900: 224 75% 30%;
+    --primary-950: 224 80% 20%;
+    
+    /* Secondary */
+    --secondary: 270 76% 86%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-50: 270 100% 95%;
+    --secondary-100: 270 95% 90%;
+    --secondary-200: 270 90% 85%;
+    --secondary-300: 270 85% 80%;
+    --secondary-400: 270 80% 75%;
+    --secondary-500: 270 76% 70%;
+    --secondary-600: 270 70% 60%;
+    --secondary-700: 270 65% 50%;
+    --secondary-800: 270 70% 40%;
+    --secondary-900: 270 75% 30%;
+    --secondary-950: 270 80% 20%;
+    
+    /* Accent */
+    --accent: 0 76% 85%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Muted */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Component-specific themes */
+    /* Baby Development (Pink) */
+    --baby-50: 350 100% 96%;
+    --baby-100: 350 100% 92%;
+    --baby-500: 350 100% 70%;
+    --baby-600: 350 100% 60%;
+    
+    /* Mom's Health (Green) */
+    --health-50: 142 76% 95%;
+    --health-100: 142 60% 86%;
+    --health-400: 142 70% 66%;
+    --health-500: 142 76% 55%;
+    --health-600: 142 76% 45%;
+    
+    /* Upcoming Reminders (Blue) */
+    --reminder-50: 195 76% 95%;
+    --reminder-100: 195 75% 85%;
+    --reminder-500: 195 76% 60%;
+    
+    /* Daily Tips (Amber) */
+    --tip-50: 38 100% 92%;
+    --tip-100: 38 100% 85%;
+    --tip-500: 38 100% 65%;
+    --tip-700: 38 90% 45%;
+    
+    /* Font sizes - Default is medium */
+    --font-small: 0.85;
+    --font-medium: 1;
+    --font-large: 1.15;
+    
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 222 47% 10%;
+    --foreground: 210 40% 98%;
+    
+    /* Card */
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+    
+    /* Popover */
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Border & Input */
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 224 76% 48%;
+    
+    /* Primary & Secondary (preserved for consistent branding) */
+    --primary-foreground: 222 47% 11%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted */
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* Accent */
+    --accent: 0 76% 75%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Component-specific themes (darker variants) */
+    --baby-50: 350 30% 25%;
+    --baby-100: 350 25% 30%;
+    --baby-500: 350 70% 60%;
+    --baby-600: 350 80% 65%;
+    
+    --health-50: 142 30% 25%;
+    --health-100: 142 25% 30%;
+    --health-400: 142 60% 55%;
+    --health-500: 142 70% 60%;
+    --health-600: 142 75% 65%;
+    
+    --reminder-50: 195 30% 25%;
+    --reminder-100: 195 25% 30%;
+    --reminder-500: 195 70% 55%;
+    
+    --tip-50: 38 30% 25%;
+    --tip-100: 38 25% 30%;
+    --tip-500: 38 70% 55%;
+    --tip-700: 38 80% 65%;
+  }
+  
+  /* Font size classes */
+  .text-size-small {
+    --compact-text-xs: 7px;
+    --compact-text-sm: 8px;
+    --compact-text-base: 9px;
+    --compact-text-lg: 10px;
+  }
+  
+  .text-size-medium {
+    --compact-text-xs: 8px;
+    --compact-text-sm: 9px;
+    --compact-text-base: 10px;
+    --compact-text-lg: 11px;
+  }
+  
+  .text-size-large {
+    --compact-text-xs: 9px;
+    --compact-text-sm: 10px;
+    --compact-text-base: 11px;
+    --compact-text-lg: 12px;
+  }
+}
+
+/* Global styles */
+@layer components {
+  .page-container {
+    @apply px-4 sm:px-16 md:px-24 lg:px-32 pb-24 min-h-screen;
+  }
+  
+  .section-container {
+    @apply mb-8;
+  }
+  
+  .section-title {
+    @apply text-sm text-muted-foreground font-medium;
+  }
+  
+  .section-divider {
+    @apply h-px bg-border w-full mt-1;
+  }
+  
+  .heading-1 {
+    @apply text-2xl font-medium tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply text-xl font-medium;
+  }
+  
+  .heading-3 {
+    @apply text-lg font-medium;
+  }
+  
+  .card-container {
+    @apply rounded-xl p-4 transition-all shadow-card hover:shadow-card-hover;
+  }
+  
+  .card-title {
+    @apply text-lg font-medium;
+  }
+  
+  .card-subtitle {
+    @apply text-sm text-muted-foreground;
+  }
+  
+  .card-content {
+    @apply text-base;
+  }
+  
+  .compact-card-title {
+    font-size: var(--compact-text-lg);
+    @apply font-medium;
+  }
+  
+  .compact-card-content {
+    font-size: var(--compact-text-base);
+  }
+  
+  .compact-card-data {
+    font-size: var(--compact-text-lg);
+    @apply font-semibold;
+  }
+  
+  .compact-card-label {
+    font-size: var(--compact-text-xs);
+    @apply text-muted-foreground;
+  }
+  
+  .neo-shadow {
+    @apply shadow-neo-light dark:shadow-neo-dark rounded-xl transition-all;
+  }
+  
+  .neo-inset {
+    @apply shadow-neo-inset dark:shadow-neo-inset-dark;
+  }
+  
+  .glass-morphism {
+    @apply bg-white/25 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10;
+  }
+  
+  .animate-sound-wave {
+    animation: sound-wave 1s ease-in-out infinite;
+    transform-origin: bottom;
+  }
+}
